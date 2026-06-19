@@ -4,10 +4,11 @@ pipeline {
     stages {
 
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/ibnurestoe/php-app-5167.git'
-            }
-        }
+    steps {
+        git branch: 'main',
+        url: 'https://github.com/ibnurestoe/php-app-5167.git'
+    }
+}
 
         stage('Install Dependencies') {
             steps {
